@@ -1,0 +1,10 @@
+---
+- name: Install tomcat
+  package:
+    name: tomcat
+
+- name: Restart and enable nginx
+  systemd:
+    name: tomcat
+    state: restarted
+    enabled: true
